@@ -1,0 +1,23 @@
+
+
+{ name: "perfc"
+  clock_primary: "clk_i"
+  bus_interfaces: [
+    { protocol: "reg_iface", direction: "device" }
+  ]
+  regwidth: "32"
+  registers: [
+
+    // STATUS & CONTROL REGISTERS
+
+    { name:     "PRUEBA"
+      desc:     "Registro de prueba"
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "PRUEBA", desc: "Registro de prueba." }
+      ]
+    }
+  ]
+}
+

@@ -1,0 +1,18 @@
+CAPI=2:
+
+name: "example:ip:perfc"
+description: "Performance Counters"
+
+filesets:
+  files_rtl:
+    files:
+      - rtl/perfc_reg_pkg.sv 
+      - rtl/perfc_reg_top.sv 
+      - rtl/perfc.sv
+    
+    file_type: systemVerilogSource
+
+targets:
+  default:
+    filesets:
+    - files_rtl

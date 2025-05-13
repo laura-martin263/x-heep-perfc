@@ -37,6 +37,7 @@ filesets:
     - x-heep:ip:obi_fifo
     - x-heep:ip:pdm2pcm
     - esl_epfl:ip:obi_spi_slave
+    - example:ip:perfc
     files:
     - hw/core-v-mini-mcu/core_v_mini_mcu.sv
     - hw/core-v-mini-mcu/cpu_subsystem.sv
@@ -95,6 +96,7 @@ filesets:
     - hw/system/x_heep_system.vlt
     - hw/simulation/simulation.vlt
     - hw/ip/i2s/i2s.vlt
+    - hw/ip/perfc/perfc.vlt
     file_type: vlt
 
   rtl-fpga:
