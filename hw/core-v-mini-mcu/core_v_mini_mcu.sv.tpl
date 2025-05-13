@@ -90,7 +90,10 @@ ${pad.core_v_mini_mcu_interface}
     // External SPC interface
     input logic [core_v_mini_mcu_pkg::DMA_CH_NUM-1:0] ext_dma_slot_tx_i,
     input logic [core_v_mini_mcu_pkg::DMA_CH_NUM-1:0] ext_dma_slot_rx_i,
-    output logic [core_v_mini_mcu_pkg::DMA_CH_NUM-1:0] dma_done_o
+    output logic [core_v_mini_mcu_pkg::DMA_CH_NUM-1:0] dma_done_o,
+
+    // PERFORMANCE COUNTERS
+    output logic [31:0] prueba_hacia_ps
 );
 
   import core_v_mini_mcu_pkg::*;
@@ -512,7 +515,8 @@ ${pad.core_v_mini_mcu_interface}
       .i2s_sd_o(i2s_sd_o),
       .i2s_sd_oe_o(i2s_sd_oe_o),
       .i2s_sd_i(i2s_sd_i),
-      .i2s_rx_valid_o(i2s_rx_valid)
+      .i2s_rx_valid_o(i2s_rx_valid),
+      .prueba_hacia_pc(prueba_hacia_ps)
   );
 
   // Debug_req assign
@@ -630,5 +634,7 @@ ${pad.core_v_mini_mcu_interface}
   assign gpio_in[31]   = gpio_31_i;
   assign gpio_31_o     = gpio_out[31];
   assign gpio_31_oe_o  = gpio_oe[31];
+
+  assign prueba_hacia_ps = 32'd567891;
 
 endmodule  // core_v_mini_mcu
