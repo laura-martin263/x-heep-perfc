@@ -29,6 +29,8 @@ int main(int argc, char *argv[])
     PRINTF("Ejemplo de uso del periférico perfc\n\r");
     volatile uint32_t *perfc = (volatile uint32_t *)PERFC_BASE_ADDR;
 
+    PRINTF("Escribiendo en el registro PRUEBA...\n\r");
+
     // Leer valor del registro PRUEBA
     uint32_t prueba_val = perfc[PERFC_PRUEBA_OFFSET];  // División por 4 porque el acceso es por palabras
 

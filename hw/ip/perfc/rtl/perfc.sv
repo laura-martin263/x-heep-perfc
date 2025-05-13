@@ -16,8 +16,18 @@ module perfc #(
   perfc_reg2hw_t reg2hw;
   perfc_hw2reg_t hw2reg;
 
-  // Ejemplo simple: asignamos de vuelta el valor de prueba
-  assign hw2reg.prueba.d  = prueba_desde_core;
+  logic [31:0] registro = 32'd0;
+
+  /////////////////////////////////////////
+  // Performance counters
+  /////////////////////////////////////////
+
+  // Total cycles
+  always @(posedge clk_i) begin
+    registro <= registro + 32'd1;
+  end
+
+  assign hw2reg.prueba.d  = registro;
   assign hw2reg.prueba.de = 1'b1;
 
   // Instancia del generador de registros (generado con regtool)
