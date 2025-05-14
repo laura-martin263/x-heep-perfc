@@ -23,18 +23,30 @@
 // Dirección base del periférico perfc
 #define PERFC_BASE_ADDR  (PERIPHERAL_START_ADDRESS + 0x00080000)
 #define PERFC_PRUEBA_OFFSET  0x00  // Offset del registro PRUEBA
+#define PERFC_CONTROL_OFFSET  0X04  // Offset del registro CONTROL
+#define PERFC_PRUEBA2_OFFSET 0x08  // Offset del registro PRUEBA2
 
 int main(int argc, char *argv[])
 {
     PRINTF("Ejemplo de uso del periférico perfc\n\r");
     volatile uint32_t *perfc = (volatile uint32_t *)PERFC_BASE_ADDR;
 
-    PRINTF("Escribiendo en el registro PRUEBA...\n\r");
+    // ESTO ES LO QUE FUNCIONA PARA ESCRIBIR Y LEER DESDE SW
+    volatile uint32_t *prueba  = (uint32_t *)(PERFC_BASE_ADDR + PERFC_PRUEBA_OFFSET);
+    volatile uint32_t *control = (uint32_t *)(PERFC_BASE_ADDR + PERFC_CONTROL_OFFSET);
+    volatile uint32_t *prueba2 = (uint32_t *)(PERFC_BASE_ADDR + PERFC_PRUEBA2_OFFSET);
 
-    // Leer valor del registro PRUEBA
-    uint32_t prueba_val = perfc[PERFC_PRUEBA_OFFSET];  // División por 4 porque el acceso es por palabras
+    *prueba  = 0x4;
+    PRINTF("Valor PRUEBA: %d\n\r", *prueba);
 
-    PRINTF("Valor leído del registro PRUEBA: %d\n\r", prueba_val);
+    *control = 0x5;
+    PRINTF("Valor CONTROL: %d\n\r", *control);
+
+    *prueba2 = 0x6;
+    PRINTF("Valor PRUEBA2: %d\n\r", *prueba2);
+
+    // HASTA AQUI ES LO QUE FUNCIONA PARA ESCRIBIR Y LEER DESDE SW
+
 
     return EXIT_SUCCESS;
 }

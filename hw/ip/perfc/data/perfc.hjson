@@ -18,6 +18,24 @@
         { bits: "31:0", name: "PRUEBA", desc: "Registro de prueba." }
       ]
     }
+
+    { name:     "CONTROL"
+      desc:     "Registro de control. Si es 1, reset del contador."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "CONTROL", desc: "Registro de control. Si es 1, reset del contador." }
+      ]
+    }
+
+    { name:     "PRUEBA2"
+      desc:     "Registro de prueba"
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "PRUEBA", desc: "Registro de prueba." }
+      ]
+    }
   ]
 }
 
