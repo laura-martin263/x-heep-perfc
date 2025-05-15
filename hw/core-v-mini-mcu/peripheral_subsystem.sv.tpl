@@ -93,7 +93,8 @@ module peripheral_subsystem
     input  logic pdm2pcm_pdm_i,
 
     // PERFORMANCE COUNTERS
-    inout logic [31:0] prueba_hacia_pc
+    inout logic core_sleep,
+    inout logic cpu_subsystem_powergate_switch
 );
 
   import core_v_mini_mcu_pkg::*;
@@ -582,7 +583,8 @@ module peripheral_subsystem
     .rst_ni,
     .reg_req_i(peripheral_slv_req[core_v_mini_mcu_pkg::PERFC_IDX]),
     .reg_rsp_o(peripheral_slv_rsp[core_v_mini_mcu_pkg::PERFC_IDX]),
-    .prueba_desde_core(prueba_hacia_pc)
+    .cpu_clock_gate_i(core_sleep),
+    .cpu_power_gate_i(~cpu_subsystem_powergate_switch)
   );
   
 endmodule : peripheral_subsystem

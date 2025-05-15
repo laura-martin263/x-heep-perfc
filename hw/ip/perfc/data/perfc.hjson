@@ -8,17 +8,6 @@
   regwidth: "32"
   registers: [
 
-    // STATUS & CONTROL REGISTERS
-
-    { name:     "PRUEBA"
-      desc:     "Registro de prueba"
-      swaccess: "rw"
-      hwaccess: "hrw"
-      fields: [
-        { bits: "31:0", name: "PRUEBA", desc: "Registro de prueba." }
-      ]
-    }
-
     { name:     "CONTROL"
       desc:     "Registro de control. Si es 1, reset del contador."
       swaccess: "rw"
@@ -28,12 +17,21 @@
       ]
     }
 
-    { name:     "PRUEBA2"
-      desc:     "Registro de prueba"
+    { name:     "TOTAL_CYCLES"
+      desc:     "Total de ciclos activos"
       swaccess: "rw"
       hwaccess: "hrw"
       fields: [
-        { bits: "31:0", name: "PRUEBA", desc: "Registro de prueba." }
+        { bits: "31:0", name: "TOTAL_CYCLES", desc: "Total de ciclos activos." }
+      ]
+    }
+
+    { name:     "CPU_ACTIVE_CYCLES"
+      desc:     "Total de ciclos activos de la CPU"
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "CPU_ACTIVE_CYCLES", desc: "Total de ciclos activos de la CPU." }
       ]
     }
   ]

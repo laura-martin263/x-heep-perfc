@@ -7,7 +7,8 @@ module perfc #(
     input  reg_req_t reg_req_i,
     output reg_rsp_t reg_rsp_o,
 
-    input logic [31:0] prueba_desde_core
+    input logic cpu_clock_gate_i,
+    input logic cpu_power_gate_i
 );
 
   import perfc_reg_pkg::*;
@@ -16,7 +17,9 @@ module perfc #(
   perfc_reg2hw_t reg2hw;
   perfc_hw2reg_t hw2reg;
 
-  logic [31:0] registro = 32'd0;
+  // Definición de los registros
+  logic [31:0] reg0 = 32'd0;  // Total cycles
+  logic [31:0] reg1 = 32'd0;  // CPU - Active cycles
 
   /////////////////////////////////////////
   // Performance counters
@@ -25,19 +28,31 @@ module perfc #(
   // Total cycles
   always @(posedge clk_i) begin
     if (reg2hw.control.q[0]) begin
-      registro <= 32'd0;
+      reg0 <= 32'd0;
     end else if (reg2hw.control.q[1]) begin
-      registro <= registro + 32'd1;
+      reg0 <= reg0 + 32'd1;
     end else begin
-      // Se mantiene el valor del registro
+      // Se mantiene el valor de reg0
     end
   end
 
-  assign hw2reg.prueba.d  = registro;
-  assign hw2reg.prueba.de = 1'b1;
+  // CPU - Active cycles
+  always @(posedge clk_i) begin
+    if (reg2hw.control.q[0]) begin
+      reg1 <= 32'd0;
+    end else if (reg2hw.control.q[1] && cpu_clock_gate_i == 1'b0 && cpu_power_gate_i == 1'b0) begin
+      reg1 <= reg1 + 32'd1;
+    end else begin
+      // Se mantiene el valor de reg1
+    end
+  end
 
-  assign hw2reg.prueba2.d = reg2hw.prueba2.q;
-  assign hw2reg.prueba.de = 1'b1;
+  // Se asigna el valor de cada registro a la salida
+  assign hw2reg.total_cycles.d = reg0;
+  assign hw2reg.total_cycles.de = 1'b1;
+  assign hw2reg.cpu_active_cycles.d = reg1;
+  assign hw2reg.cpu_active_cycles.de = 1'b1;
+
 
   // Instancia del generador de registros (generado con regtool)
   perfc_reg_top #(

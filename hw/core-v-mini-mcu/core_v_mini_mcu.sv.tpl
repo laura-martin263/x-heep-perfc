@@ -516,7 +516,8 @@ ${pad.core_v_mini_mcu_interface}
       .i2s_sd_oe_o(i2s_sd_oe_o),
       .i2s_sd_i(i2s_sd_i),
       .i2s_rx_valid_o(i2s_rx_valid),
-      .prueba_hacia_pc(prueba_hacia_ps)
+      .core_sleep(core_sleep),
+      .cpu_subsystem_powergate_switch(cpu_subsystem_powergate_switch_no)
   );
 
   // Debug_req assign
