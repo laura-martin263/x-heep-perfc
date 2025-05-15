@@ -22,21 +22,20 @@ module perfc #(
   // Performance counters
   /////////////////////////////////////////
 
-  /*// Total cycles
+  // Total cycles
   always @(posedge clk_i) begin
-    if (inicio == 32'b1) begin
+    if (reg2hw.control.q[0]) begin
       registro <= 32'd0;
     end else begin
       registro <= registro + 32'd1;
     end
-  end*/
+  end
 
-  assign hw2reg.prueba.d   = reg2hw.prueba.q;
-  assign hw2reg.prueba2.de = 1'b1;
-  assign hw2reg.prueba2.d  = reg2hw.prueba2.q;
-  assign hw2reg.prueba.de  = 1'b1;
-  assign hw2reg.control.d  = reg2hw.control.q;
-  assign hw2reg.control.de = 1'b1;
+  assign hw2reg.prueba.d  = registro;
+  assign hw2reg.prueba.de = 1'b1;
+
+  assign hw2reg.prueba2.d = reg2hw.prueba2.q;
+  assign hw2reg.prueba.de = 1'b1;
 
   // Instancia del generador de registros (generado con regtool)
   perfc_reg_top #(
