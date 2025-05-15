@@ -34,6 +34,521 @@
         { bits: "31:0", name: "CPU_ACTIVE_CYCLES", desc: "Total de ciclos activos de la CPU." }
       ]
     }
+
+    { name:     "CPU_CLOCK_GATE_CYCLES"
+      desc:     "Total de ciclos en clock-gating de la CPU"
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "CPU_CLOCK_GATE_CYCLES", desc: "Total de ciclos en clock-gating de la CPU." }
+      ]
+    }
+
+    { name:     "CPU_POWER_GATE_CYCLES"
+      desc:     "Total de ciclos en power-gating de la CPU"
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "CPU_POWER_GATE_CYCLES", desc: "Total de ciclos en power-gating de la CPU." }
+      ]
+    }
+
+    { name:     "BUS_AO_ACTIVE_CYCLES"
+      desc:     "Total de ciclos activos del Bus AO."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "BUS_AO_ACTIVE_CYCLES", desc: "Total de ciclos activos del Bus AO." }
+      ]
+    }
+
+    { name:     "BUS_AO_CLOCK_GATE_CYCLES"
+      desc:     "Total de ciclos en clock-gating del Bus AO."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "BUS_AO_CLOCK_GATE_CYCLES", desc: "Total de ciclos en clock-gating del Bus AO." }
+      ]
+    }
+
+    { name:     "DEBUG_AO_ACTIVE_CYCLES"
+      desc:     "Total de ciclos activos de debug AO."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "DEBUG_AO_ACTIVE_CYCLES", desc: "Total de ciclos activos de debug AO." }
+      ]
+    }
+
+    { name:     "DEBUG_AO_CLOCK_GATE_CYCLES"
+      desc:     "Total de ciclos en clock-gating de debug AO."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "DEBUG_AO_CLOCK_GATE_CYCLES", desc: "Total de ciclos en clock-gating de debug AO." }
+      ]
+    }
+
+    { name:     "SOC_CTRL_AO_ACTIVE_CYCLES"
+      desc:     "Total de ciclos activos de soc ctrl AO."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "SOC_CTRL_AO_ACTIVE_CYCLES", desc: "Total de ciclos en activos de soc ctrl AO." }
+      ]
+    }
+
+    { name:     "SOC_CTRL_AO_CLOCK_GATE_CYCLES"
+      desc:     "Total de ciclos en clock-gating de soc ctrl AO."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "SOC_CTRL_AO_CLOCK_GATE_CYCLES", desc: "Total de ciclos en clock-gating de soc ctrl AO." }
+      ]
+    }
+
+    { name:     "BOOT_ROM_AO_ACTIVE_CYCLES"
+      desc:     "Total de ciclos activos de boot rom AO."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "BOOT_ROM_AO_ACTIVE_CYCLES", desc: "Total de ciclos activos de boot rom AO." }
+      ]
+    }
+
+    { name:     "BOOT_ROM_AO_CLOCK_GATE_CYCLES"
+      desc:     "Total de ciclos en clock-gating de boot rom AO."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "BOOT_ROM_AO_CLOCK_GATE_CYCLES", desc: "Total de ciclos en clock-gating de boot rom AO." }
+      ]
+    }
+
+    { name:     "SPI_FLASH_AO_ACTIVE_CYCLES"
+      desc:     "Total de ciclos activos de spi flash AO."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "SPI_FLASH_AO_ACTIVE_CYCLES", desc: "Total de ciclos activos de spi flash AO." }
+      ]
+    }
+
+    { name:     "SPI_FLASH_AO_CLOCK_GATE_CYCLES"
+      desc:     "Total de ciclos en clock-gating de spi flash AO."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "SPI_FLASH_AO_CLOCK_GATE_CYCLES", desc: "Total de ciclos en clock-gating de spi flash AO." }
+      ]
+    }
+
+    { name:     "SPI_AO_ACTIVE_CYCLES"
+      desc:     "Total de ciclos activos de spi AO."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "SPI_AO_ACTIVE_CYCLES", desc: "Total de ciclos activos de spi AO." }
+      ]
+    }
+
+    { name:     "SPI_AO_CLOCK_GATE_CYCLES"
+      desc:     "Total de ciclos en clock-gating de spi AO."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "SPI_AO_CLOCK_GATE_CYCLES", desc: "Total de ciclos en clock-gating de spi AO." }
+      ]
+    }
+
+    { name:     "POWER_MANAGER_AO_ACTIVE_CYCLES"
+      desc:     "Total de ciclos activos del power manager AO."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "POWER_MANAGER_AO_ACTIVE_CYCLES", desc: "Total de ciclos activos del power manager AO." }
+      ]
+    }
+
+    { name:     "POWER_MANAGER_AO_CLOCK_GATE_CYCLES"
+      desc:     "Total de ciclos en clock-gating del power manager AO."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "POWER_MANAGER_AO_CLOCK_GATE_CYCLES", desc: "Total de ciclos en clock-gating del power manager AO." }
+      ]
+    }
+
+    { name:     "TIMER_AO_ACTIVE_CYCLES"
+      desc:     "Total de ciclos activos del timer AO."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "TIMER_AO_ACTIVE_CYCLES", desc: "Total de ciclos activos del timer AO." }
+      ]
+    }
+
+    { name:     "TIMER_AO_CLOCK_GATE_CYCLES"
+      desc:     "Total de ciclos en clock-gating del timer AO."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "TIMER_AO_CLOCK_GATE_CYCLES", desc: "Total de ciclos en clock-gating del timer AO." }
+      ]
+    }
+
+    { name:     "DMA_AO_ACTIVE_CYCLES"
+      desc:     "Total de ciclos activos del dma AO."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "DMA_AO_ACTIVE_CYCLES", desc: "Total de ciclos activos del dma AO." }
+      ]
+    }
+
+    { name:     "DMA_AO_CLOCK_GATE_CYCLES"
+      desc:     "Total de ciclos en clock-gating del dma AO."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "DMA_AO_CLOCK_GATE_CYCLES", desc: "Total de ciclos en clock-gating del dma AO." }
+      ]
+    }
+
+    { name:     "FAST_INTR_CTRL_AO_ACTIVE_CYCLES"
+      desc:     "Total de ciclos activos del fast intr cntrl AO."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "FAST_INTR_CTRL_AO_ACTIVE_CYCLES", desc: "Total de ciclos activos del fast intr cntrl AO." }
+      ]
+    }
+
+    { name:     "FAST_INTR_CTRL_AO_CLOCK_GATE_CYCLES"
+      desc:     "Total de ciclos en clock-gating del fast intr ctrl AO."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "FAST_INTR_CTRL_AO_CLOCK_GATE_CYCLES", desc: "Total de ciclos en clock-gating del fast intr ctrl AO." }
+      ]
+    }
+
+    { name:     "GPIO_AO_ACTIVE_CYCLES"
+      desc:     "Total de ciclos activos de gpio AO."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "GPIO_AO_ACTIVE_CYCLES", desc: "Total de ciclos activos de gpio AO." }
+      ]
+    }
+
+    { name:     "GPIO_AO_CLOCK_GATE_CYCLES"
+      desc:     "Total de ciclos en clock-gating de gpio AO."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "GPIO_AO_CLOCK_GATE_CYCLES", desc: "Total de ciclos en clock-gating de gpio AO." }
+      ]
+    }
+
+    { name:     "UART_AO_ACTIVE_CYCLES"
+      desc:     "Total de ciclos activos de uart AO."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "UART_AO_ACTIVE_CYCLES", desc: "Total de ciclos activos de uart AO." }
+      ]
+    }
+
+    { name:     "UART_AO_CLOCK_GATE_CYCLES"
+      desc:     "Total de ciclos en clock-gating de uart AO."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "UART_AO_CLOCK_GATE_CYCLES", desc: "Total de ciclos en clock-gating de uart AO." }
+      ]
+    }
+
+    { name:     "PLIC_ACTIVE_CYCLES"
+      desc:     "Total de ciclos activos de PLIC."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "PLIC_ACTIVE_CYCLES", desc: "Total de ciclos activos de PLIC." }
+      ]
+    }
+
+    { name:     "PLIC_CLOCK_GATE_CYCLES"
+      desc:     "Total de ciclos en clock-gating de PLIC."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "PLIC_CLOCK_GATE_CYCLES", desc: "Total de ciclos en clock-gating de PLIC." }
+      ]
+    }
+
+    { name:     "PLIC_POWER_GATE_CYCLES"
+      desc:     "Total de ciclos en power-gating de PLIC."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "PLIC_POWER_GATE_CYCLES", desc: "Total de ciclos en power-gating de PLIC." }
+      ]
+    }
+
+    { name:     "GPIO_ACTIVE_CYCLES"
+      desc:     "Total de ciclos activos de GPIO."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "GPIO_ACTIVE_CYCLES", desc: "Total de ciclos activos de GPIO." }
+      ]
+    }
+
+    { name:     "GPIO_CLOCK_GATE_CYCLES"
+      desc:     "Total de ciclos en clock-gating de GPIO."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "GPIO_CLOCK_GATE_CYCLES", desc: "Total de ciclos en clock-gating de GPIO." }
+      ]
+    }
+
+    { name:     "GPIO_POWER_GATE_CYCLES"
+      desc:     "Total de ciclos en power-gating de GPIO."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "GPIO_POWER_GATE_CYCLES", desc: "Total de ciclos en power-gating de GPIO." }
+      ]
+    }
+
+    { name:     "I2C_ACTIVE_CYCLES"
+      desc:     "Total de ciclos activos de I2C."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "I2C_ACTIVE_CYCLES", desc: "Total de ciclos activos de I2C." }
+      ]
+    }
+
+    { name:     "I2C_CLOCK_GATE_CYCLES"
+      desc:     "Total de ciclos en clock-gating de I2C."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "I2C_CLOCK_GATE_CYCLES", desc: "Total de ciclos en clock-gating de I2C." }
+      ]
+    }
+
+    { name:     "I2C_POWER_GATE_CYCLES"
+      desc:     "Total de ciclos en power-gating de I2C."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "I2C_POWER_GATE_CYCLES", desc: "Total de ciclos en power-gating de I2C." }
+      ]
+    }
+
+    { name:     "TIMER_ACTIVE_CYCLES"
+      desc:     "Total de ciclos activos de TIMER."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "TIMER_ACTIVE_CYCLES", desc: "Total de ciclos activos de TIMER." }
+      ]
+    }
+
+    { name:     "TIMER_CLOCK_GATE_CYCLES"
+      desc:     "Total de ciclos en clock-gating de TIMER."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "TIMER_CLOCK_GATE_CYCLES", desc: "Total de ciclos en clock-gating de TIMER." }
+      ]
+    }
+
+    { name:     "TIMER_POWER_GATE_CYCLES"
+      desc:     "Total de ciclos en power-gating de TIMER."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "TIMER_POWER_GATE_CYCLES", desc: "Total de ciclos en power-gating de TIMER." }
+      ]
+    }
+
+    { name:     "SPI_ACTIVE_CYCLES"
+      desc:     "Total de ciclos activos de SPI."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "SPI_ACTIVE_CYCLES", desc: "Total de ciclos activos de SPI." }
+      ]
+    }
+
+    { name:     "SPI_CLOCK_GATE_CYCLES"
+      desc:     "Total de ciclos en clock-gating de SPI."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "SPI_CLOCK_GATE_CYCLES", desc: "Total de ciclos en clock-gating de SPI." }
+      ]
+    }
+
+    { name:     "SPI_POWER_GATE_CYCLES"
+      desc:     "Total de ciclos en power-gating de SPI."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "SPI_POWER_GATE_CYCLES", desc: "Total de ciclos en power-gating de SPI." }
+      ]
+    }
+
+    { name:     "RAM_BANK_0_ACTIVE_CYCLES"
+      desc:     "Total de ciclos activos de RAM_BANK_0."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "RAM_BANK_0_ACTIVE_CYCLES", desc: "Total de ciclos activos de RAM_BANK_0." }
+      ]
+    }
+
+    { name:     "RAM_BANK_0_CLOCK_GATE_CYCLES"
+      desc:     "Total de ciclos en clock-gating de RAM_BANK_0."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "RAM_BANK_0_CLOCK_GATE_CYCLES", desc: "Total de ciclos en clock-gating de RAM_BANK_0." }
+      ]
+    }
+
+    { name:     "RAM_BANK_0_POWER_GATE_CYCLES"
+      desc:     "Total de ciclos en power-gating de RAM_BANK_0."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "RAM_BANK_0_POWER_GATE_CYCLES", desc: "Total de ciclos en power-gating de RAM_BANK_0." }
+      ]
+    }
+
+    { name:     "RAM_BANK_0_RETENTIVE_CYCLES"
+      desc:     "Total de ciclos retentive de RAM_BANK_0."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "RAM_BANK_0_RETENTIVE_CYCLES", desc: "Total de ciclos retentive de RAM_BANK_0." }
+      ]
+    }
+
+    { name:     "RAM_BANK_1_ACTIVE_CYCLES"
+      desc:     "Total de ciclos activos de RAM_BANK_1."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "RAM_BANK_1_ACTIVE_CYCLES", desc: "Total de ciclos activos de RAM_BANK_1." }
+      ]
+    }
+
+    { name:     "RAM_BANK_1_CLOCK_GATE_CYCLES"
+      desc:     "Total de ciclos en clock-gating de RAM_BANK_1."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "RAM_BANK_1_CLOCK_GATE_CYCLES", desc: "Total de ciclos en clock-gating de RAM_BANK_1." }
+      ]
+    }
+
+    { name:     "RAM_BANK_1_POWER_GATE_CYCLES"
+      desc:     "Total de ciclos en power-gating de RAM_BANK_1."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "RAM_BANK_1_POWER_GATE_CYCLES", desc: "Total de ciclos en power-gating de RAM_BANK_1." }
+      ]
+    }
+
+    { name:     "RAM_BANK_1_RETENTIVE_CYCLES"
+      desc:     "Total de ciclos retentive de RAM_BANK_1."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "RAM_BANK_1_RETENTIVE_CYCLES", desc: "Total de ciclos retentive de RAM_BANK_1." }
+      ]
+    }
+
+    { name:     "RAM_BANK_2_ACTIVE_CYCLES"
+      desc:     "Total de ciclos activos de RAM_BANK_2."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "RAM_BANK_2_ACTIVE_CYCLES", desc: "Total de ciclos activos de RAM_BANK_2." }
+      ]
+    }
+
+    { name:     "RAM_BANK_2_CLOCK_GATE_CYCLES"
+      desc:     "Total de ciclos en clock-gating de RAM_BANK_2."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "RAM_BANK_2_CLOCK_GATE_CYCLES", desc: "Total de ciclos en clock-gating de RAM_BANK_2." }
+      ]
+    }
+
+    { name:     "RAM_BANK_2_POWER_GATE_CYCLES"
+      desc:     "Total de ciclos en power-gating de RAM_BANK_2."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "RAM_BANK_2_POWER_GATE_CYCLES", desc: "Total de ciclos en power-gating de RAM_BANK_2." }
+      ]
+    }
+
+    { name:     "RAM_BANK_2_RETENTIVE_CYCLES"
+      desc:     "Total de ciclos retentive de RAM_BANK_2."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "RAM_BANK_2_RETENTIVE_CYCLES", desc: "Total de ciclos retentive de RAM_BANK_2." }
+      ]
+    }
+
+    { name:     "RAM_BANK_3_ACTIVE_CYCLES"
+      desc:     "Total de ciclos activos de RAM_BANK_3."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "RAM_BANK_3_ACTIVE_CYCLES", desc: "Total de ciclos activos de RAM_BANK_3." }
+      ]
+    }
+
+    { name:     "RAM_BANK_3_CLOCK_GATE_CYCLES"
+      desc:     "Total de ciclos en clock-gating de RAM_BANK_3."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "RAM_BANK_3_CLOCK_GATE_CYCLES", desc: "Total de ciclos en clock-gating de RAM_BANK_3." }
+      ]
+    }
+
+    { name:     "RAM_BANK_3_POWER_GATE_CYCLES"
+      desc:     "Total de ciclos en power-gating de RAM_BANK_3."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "RAM_BANK_3_POWER_GATE_CYCLES", desc: "Total de ciclos en power-gating de RAM_BANK_3." }
+      ]
+    }
+
+    { name:     "RAM_BANK_3_RETENTIVE_CYCLES"
+      desc:     "Total de ciclos retentive de RAM_BANK_3."
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "RAM_BANK_3_RETENTIVE_CYCLES", desc: "Total de ciclos retentive de RAM_BANK_3." }
+      ]
+    }
+
+
   ]
 }
 
