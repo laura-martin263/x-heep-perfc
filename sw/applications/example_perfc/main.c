@@ -43,21 +43,29 @@ int main(int argc, char *argv[])
     volatile uint32_t *prueba2 = (uint32_t *)(PERFC_BASE_ADDR + PERFC_PRUEBA2_OFFSET);
 
     PRINTF("Valor PRUEBA 0: %d\n\r", *prueba);
-    *control = 0x1;
-    PRINTF("Valor PRUEBA 1: %d\n\r", *prueba);
-    *control = 0x0;
-    PRINTF("Valor PRUEBA 2: %d\n\r", *prueba);
-    wait_cycles(1000000);  // Espera aproximada
 
+    // Control OO -> Ni resetea ni se empieza a contar
+    *control = 0x0;
+    PRINTF("Valor PRUEBA 1: %d\n\r", *prueba);
+    PRINTF("Valor PRUEBA 2: %d\n\r", *prueba);
+
+    // Control 01 -> Se resetea.
+    *control = 0x1;
     PRINTF("Valor PRUEBA 3: %d\n\r", *prueba);
     PRINTF("Valor PRUEBA 4: %d\n\r", *prueba);
-    *control = 0x1;
-    PRINTF("Valor PRUEBA 5: %d\n\r", *prueba);    
-    *control = 0x0;
+
+    // Control 10 -> Se empieza a contar sin resetear
+    *control = 0x2;
+    PRINTF("Valor PRUEBA 5: %d\n\r", *prueba);
     PRINTF("Valor PRUEBA 6: %d\n\r", *prueba);
     wait_cycles(1000000);  // Espera aproximada
     PRINTF("Valor PRUEBA 7: %d\n\r", *prueba);
     PRINTF("Valor PRUEBA 8: %d\n\r", *prueba);
+
+    // Control 11 -> Se resetea
+    *control = 0x3;
+    PRINTF("Valor PRUEBA 3: %d\n\r", *prueba);
+    PRINTF("Valor PRUEBA 4: %d\n\r", *prueba);
 
 
     /*

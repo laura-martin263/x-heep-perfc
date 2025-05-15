@@ -26,8 +26,10 @@ module perfc #(
   always @(posedge clk_i) begin
     if (reg2hw.control.q[0]) begin
       registro <= 32'd0;
-    end else begin
+    end else if (reg2hw.control.q[1]) begin
       registro <= registro + 32'd1;
+    end else begin
+      // Se mantiene el valor del registro
     end
   end
 
